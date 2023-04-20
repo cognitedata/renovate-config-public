@@ -13,7 +13,7 @@
   "labels": ["dependencies", "renovate"],
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
   "packageRules": [
     {
       "matchPackageNames": ["org.typelevel:cats-effect"],
