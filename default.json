@@ -16,7 +16,7 @@
   },
   "packageRules": [
     {
-      "matchPackageNames": ["org.typelevel:cats-effect"],
+      "matchPackagePrefixes": ["org.typelevel:cats-effect"],
       "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))(\\.(?<patch>\\d+))$"
     }  
   ]
