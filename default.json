@@ -6,7 +6,9 @@
   ],
   "onboardingConfigFileName": ".github/renovate.json",
   "stabilityDays": 3,
+  "automerge": false,
   "platformAutomerge": true,
+  "dependencyDashboardApproval": true,
   "pre-commit": {
     "enabled": true
   },
