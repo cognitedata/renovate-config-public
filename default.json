@@ -9,6 +9,7 @@
   "automerge": false,
   "platformAutomerge": true,
   "dependencyDashboardApproval": true,
+  "rebaseWhen": "conflicted",
   "pre-commit": {
     "enabled": true
   },
