@@ -8,7 +8,7 @@
   "stabilityDays": 3,
   "automerge": false,
   "platformAutomerge": true,
-  "dependencyDashboardApproval": true,
+  "dependencyDashboardApproval": false,
   "rebaseWhen": "conflicted",
   "pre-commit": {
     "enabled": true
