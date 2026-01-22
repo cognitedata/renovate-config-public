@@ -5,7 +5,8 @@
     "**/node_modules/**"
   ],
   "onboardingConfigFileName": ".github/renovate.json",
-  "stabilityDays": 3,
+  "minimumReleaseAge": "3 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "automerge": false,
   "platformAutomerge": true,
   "dependencyDashboardApproval": false,
