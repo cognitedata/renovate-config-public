@@ -1,9 +1,0 @@
-{
-  "name": "renovate-config-public",
-  "version": "0.0.0-development",
-  "description": "Renovate config presets for Cognite.",
-  "devDependencies": {
-    "ajv-cli": "5.0.0",
-    "ajv-formats": "3.0.1"
-  }
-}
