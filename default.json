@@ -3,7 +3,7 @@
   "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
   "ignorePaths": ["**/node_modules/**"],
   "onboardingConfigFileName": ".github/renovate.json",
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "7 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "automerge": false,
   "platformAutomerge": true,
