@@ -1,26 +1,24 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
-  "ignorePaths": [
-    "**/node_modules/**"
-  ],
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+  "ignorePaths": ["**/node_modules/**"],
   "onboardingConfigFileName": ".github/renovate.json",
-  "stabilityDays": 3,
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "automerge": false,
   "platformAutomerge": true,
   "dependencyDashboardApproval": false,
   "rebaseWhen": "conflicted",
-  "pre-commit": {
-    "enabled": true
-  },
+  "pre-commit": {"enabled": true},
   "labels": ["dependencies", "renovate"],
-  "lockFileMaintenance": {
-    "enabled": true
-  },
+  "lockFileMaintenance": {"enabled": true},
   "packageRules": [
     {
-      "matchPackagePrefixes": ["org.typelevel:cats-effect", "co.fs2:fs2"],
-      "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))(\\.(?<patch>\\d+))$"
-    }  
+      "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))(\\.(?<patch>\\d+))$",
+      "matchPackageNames": [
+        "org.typelevel:cats-effect{/,}**",
+        "co.fs2:fs2{/,}**"
+      ]
+    }
   ]
 }
