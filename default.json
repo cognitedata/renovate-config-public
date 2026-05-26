@@ -4,7 +4,6 @@
   "ignorePaths": ["**/node_modules/**"],
   "onboardingConfigFileName": ".github/renovate.json",
   "minimumReleaseAge": "7 days",
-  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "automerge": false,
   "platformAutomerge": true,
   "dependencyDashboardApproval": false,
