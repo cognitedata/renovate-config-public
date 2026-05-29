@@ -11,7 +11,28 @@
   "pre-commit": {"enabled": true},
   "labels": ["dependencies", "renovate"],
   "lockFileMaintenance": {"enabled": true},
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^Jenkinsfile$/"],
+      "matchStrings": [
+        "image:\\s*('|\")(?<depName>.+?):(?<currentValue>.+?)(@(?<currentDigest>sha256:[a-f0-9]+))?('|\")"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ],  
   "packageRules": [
+    {
+      "description": "Group packages from https://github.com/stepancheg/rust-protobuf monorepo together",
+      "groupName": "rust-protobuf monorepo",
+      "matchSourceUrls": ["https://github.com/stepancheg/rust-protobuf{/,}**"]
+    },
+    {
+      "description": " Group rust HTTP ecosystem packages.",
+      "matchCategories": ["rust"],
+      "groupName": "rust-http",
+      "matchPackageNames": ["/axum/", "/hyper/", "/http/"]
+    },
     {
       "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))(\\.(?<patch>\\d+))$",
       "matchPackageNames": [
