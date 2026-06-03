@@ -4,7 +4,7 @@
   "ignorePaths": ["**/node_modules/**"],
   "onboardingConfigFileName": ".github/renovate.json",
   "minimumReleaseAge": "7 days",
-  "enabled": false,
+  "prCreation": "not-pending",
   "vulnerabilityAlerts": {
     "enabled": true
   },
