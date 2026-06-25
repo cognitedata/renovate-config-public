@@ -26,7 +26,18 @@
       ],
       "datasourceTemplate": "docker"
     }
-  ],  
+  ],
+  "prBodyColumns": [
+    "Package",
+    "Type",
+    "Update",
+    "Change",
+    "Pending",
+    "ReleaseTimestamp"
+  ],
+  "prBodyDefinitions": {
+    "ReleaseTimestamp": "{{#if releaseTimestamp}}`{{{releaseTimestamp}}}`{{else}}-{{/if}}"
+  },
   "packageRules": [
     {
       "description": "Group packages from https://github.com/stepancheg/rust-protobuf monorepo together",
